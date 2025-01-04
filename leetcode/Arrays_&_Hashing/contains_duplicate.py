@@ -1,14 +1,18 @@
 def contains_dup(arr):
     dictionary = {}
     
-    for i in range(len(arr) - 1):
-        if i in dictionary:
+    for num in arr:
+        if num in dictionary:
             return True
-        else:
-            dictionary = arr[i]
-    print(arr)
+        dictionary[num] = 1
     return False
 
-nums = [1,2,3,4,3,6]
+def contains_dup_length(arr):
+    return len(set(arr)) < len(arr)
 
-print(contains_dup(nums))
+array = [1,2,3,4,5,6,5]
+
+print(contains_dup(array))
+print(contains_dup_length(array))
+
+print(max(6,2))
